@@ -17,11 +17,15 @@ from django.contrib import admin
 from django.urls import path
 from AppCoder.views import saludo
 from AppCoder.views import saludo_2
-from AppCoder.views import saludar_a , mostrar_mi_template, indice
+from AppCoder.views import saludar_a , mostrar_mi_template, index, index_3, imc
 urlpatterns = [
     path('admin/', admin.site.urls),  
     path("hola-mundo/saludar", saludo),
     path("hola-mundo/saludar2", saludo_2),
     path("hola-mundo/saludo/<nombre>", saludar_a), 
     path("mostrar-mi-template/", mostrar_mi_template),
+    path("mostrar-nombre-apellido/<nombre>/<apellido>", index),
+    path("mostrar-notas/", index_3),
+    path("calcular-imc/<peso>/<altura>",imc),
 ]
+

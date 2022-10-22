@@ -8,7 +8,20 @@
 </head>
 <body>
 
-ESTE ES MI PRIMER TEMPLATE !!!!!! 
+ESTE ES MI PRIMER TEMPLATE !!! {{nombre}}, {{apellido}}
 
+{% for nota in notas %}
+   
+    {if nota >5 %}
+        <p style="color:blue"> {{nota}} </p>
+    {% else %}
+        <p style="color:red"> {{nota}} </p>
+    {% endif %}
+
+    <br>
+
+    {{nota}}
+ #no detecta el endfor como funcion, ver despues
+{{% endfor %}}
 </body>
 </html>
