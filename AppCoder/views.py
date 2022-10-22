@@ -2,6 +2,7 @@ from cgitb import html
 import re
 from django.shortcuts import render
 from django.http import HttpResponse
+from AppCoder.models import Familiar
 
 def saludo(request):   #request=peticion
     return HttpResponse("Hola MI primer app")
@@ -32,3 +33,9 @@ def imc (request, peso, altura):
     
     imc = int(peso)/int(altura)**2
     return render(request,"AppCoder/imc.html", {"imc":imc})
+
+
+def mostrar_familiares(request):
+    lista_familiares = Familiar.objects.all()
+    return render(request, "Appcoder/familiares.html", 
+    {"lista_familiares": lista_familiares})
