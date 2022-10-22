@@ -19,6 +19,7 @@ from AppCoder.views import saludo
 from AppCoder.views import saludo_2
 from AppCoder.views import (saludar_a , mostrar_mi_template, 
 index, index_3, imc, mostrar_familiares)
+from blog.views import index as blog_index
 urlpatterns = [
     path('admin/', admin.site.urls),  
     path("hola-mundo/saludar", saludo),
@@ -29,5 +30,7 @@ urlpatterns = [
     path("mostrar-notas/", index_3),
     path("calcular-imc/<peso>/<altura>",imc),
     path('mi-familia/', mostrar_familiares),
+    path('blog/', blog_index),
+
 ]
 
