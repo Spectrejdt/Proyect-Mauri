@@ -39,3 +39,6 @@ def mostrar_familiares(request):
     lista_familiares = Familiar.objects.all()
     return render(request, "Appcoder/familiares.html", 
     {"lista_familiares": lista_familiares})
+
+def hola():
+    print(1+1)
