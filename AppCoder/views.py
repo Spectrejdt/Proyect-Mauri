@@ -1,4 +1,5 @@
 from cgitb import html
+from msilib.schema import ListView
 import re
 from django.shortcuts import render
 from django.http import HttpResponse
@@ -39,7 +40,7 @@ def imc (request, peso, altura):
 
 
 def mostrar_familiares(request):
-    lista_familiares = Familiar.objects.all()
+    lista_familiares = Familiar.objects.all()        #obtenemos los familiares de la base de datos.
     return render(request, "Appcoder/familiares.html", 
     {"lista_familiares": lista_familiares})
 
@@ -83,3 +84,6 @@ class AltaFamiliar(View):
                                                         'msg_exito': msg_exito})
         
         return render(request, self.template_name, {"form": form})
+
+class FamiliarList(ListView):
+    model = Familiar
