@@ -18,7 +18,7 @@ from django.urls import path, include
 from AppCoder.views import saludo
 from AppCoder.views import saludo_2
 from AppCoder.views import (saludar_a , mostrar_mi_template, 
-index, index_3, imc, mostrar_familiares, BuscarFamiliar, AltaFamiliar,FamiliarList, FamiliarCrear, FamiliarBorrar, FamiliarActualizar)
+index, index_3, imc, mostrar_familiares, BuscarFamiliar, AltaFamiliar)
 from blog.views import index as blog_index
 
 urlpatterns = [
