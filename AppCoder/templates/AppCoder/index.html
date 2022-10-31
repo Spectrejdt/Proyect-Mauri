@@ -12,16 +12,16 @@ ESTE ES MI PRIMER TEMPLATE !!! {{nombre}}, {{apellido}}
 
 {% for nota in notas %}
    
-    {if nota >5 %}
-        <p style="color:blue"> {{nota}} </p>
+    {% if nota > 5 %}
+        <p style= "color:blue"> {{nota}} </p>
     {% else %}
-        <p style="color:red"> {{nota}} </p>
+        <p style= "color:red"> {{nota}} </p>
     {% endif %}
 
     <br>
 
     {{nota}}
- #no detecta el endfor como funcion, ver despues
-{{% endfor %}}
+
+{% endfor %}
 </body>
 </html>
